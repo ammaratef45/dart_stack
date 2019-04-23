@@ -1,4 +1,9 @@
 name: 'stack'
+description: A package for stack data structure.
+version: 0.0.1
+homepage: https://github.com/ammaratef45/dart_stack
+author: Ammar Atef <ammar.atef45@gmail.com>
+
 environment:
   sdk: ">=1.24.0 <3.0.0"
 dev_dependencies:
