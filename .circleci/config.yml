@@ -9,4 +9,4 @@ jobs:
       - checkout
       - run: pub get && pub run test_coverage
       - codecov/upload:
-          file: 'attendance/coverage/lcov.info'
+          file: 'coverage/lcov.info'
