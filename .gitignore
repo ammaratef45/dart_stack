@@ -1,14 +1,13 @@
-# files and directories created by pub
+# See https://www.dartlang.org/guides/libraries/private-files
+
+# Files and directories created by pub
 .dart_tool/
 .packages
 .pub/
 build/
-pubspec.lock  # Except for application packages
-# API documentation directory created by dartdoc
+# If you're building an application, you may want to check-in your pubspec.lock
+pubspec.lock
+
+# Directory created by dartdoc
+# If you don't generate documentation locally you can remove this line.
 doc/api/
-# files and directories created by other development environments
-*.iml         # IntelliJ
-*.ipr         # IntelliJ
-*.iws         # IntelliJ
-.idea/        # IntelliJ
-.DS_Store     # Mac
