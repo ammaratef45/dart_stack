@@ -7,6 +7,6 @@ jobs:
       - image: ammaratef45/flutter:v2
     steps:
       - checkout
-      - run: pub get && pub run test --coverage
+      - run: pub get && pub run test_coverage
       - codecov/upload:
           file: 'attendance/coverage/lcov.info'
