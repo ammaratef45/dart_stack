@@ -1,7 +1,7 @@
 # dart_stack
 A dart package for stack datastructure
 
-![coverage](coverage/badge.svg)
+![coverage](https://github.com/ammaratef45/dart_stack/blob/master/coverage/badge.svg)
 [![CircleCI](https://circleci.com/gh/ammaratef45/dart_stack.svg?style=svg)](https://circleci.com/gh/ammaratef45/dart_stack)
 
 # Usage
@@ -17,7 +17,7 @@ Run `pub get` to install.
 # How it works
 Import
 ```Dart
-import 'package:test_coverage/test_coverage.dart';
+import 'package:stack/stack.dart';
 ```
 Example
 ```Dart
