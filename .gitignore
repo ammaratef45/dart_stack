@@ -1,0 +1,14 @@
+# files and directories created by pub
+.dart_tool/
+.packages
+.pub/
+build/
+pubspec.lock  # Except for application packages
+# API documentation directory created by dartdoc
+doc/api/
+# files and directories created by other development environments
+*.iml         # IntelliJ
+*.ipr         # IntelliJ
+*.iws         # IntelliJ
+.idea/        # IntelliJ
+.DS_Store     # Mac
