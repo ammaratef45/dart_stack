@@ -1,7 +1,7 @@
 # dart_stack
 A dart package for stack datastructure
 
-![coverage](https://github.com/ammaratef45/dart_stack/blob/master/coverage/badge.svg)
+[![codecov](https://codecov.io/gh/ammaratef45/dart_stack/branch/master/graph/badge.svg)](https://codecov.io/gh/ammaratef45/dart_stack)
 [![CircleCI](https://circleci.com/gh/ammaratef45/dart_stack.svg?style=svg)](https://circleci.com/gh/ammaratef45/dart_stack)
 
 # Usage
