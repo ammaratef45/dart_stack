@@ -1,5 +1,5 @@
 name: 'stack'
-description: A package for stack data structure.
+description: A package for stack data structure. have the push, pop and top functionalities.
 version: 0.0.2
 homepage: https://github.com/ammaratef45/dart_stack
 author: Ammar Atef <ammar.atef45@gmail.com>
