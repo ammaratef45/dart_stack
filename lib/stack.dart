@@ -13,7 +13,7 @@ class Stack<T> {
   void push(T e) {
     _list.addLast(e);
   }
-  
+
   /// get the top of the stack and delete it.
   T pop() {
     T res = _list.last;
@@ -24,5 +24,10 @@ class Stack<T> {
   /// get the top of the stack without deleting it.
   T top() {
     return _list.last;
+  }
+
+  /// get the size of the stack.
+  int size() {
+    return _list.length;
   }
 }
