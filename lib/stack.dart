@@ -30,4 +30,12 @@ class Stack<T> {
   int size() {
     return _list.length;
   }
+
+  // print stack
+  void printStack() {
+    while (!_list.isEmpty) {
+      print(_list.last);
+      _list.removeLast();
+    }
+  }
 }
