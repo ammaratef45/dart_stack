@@ -33,4 +33,16 @@ class Stack<T> {
 
   /// get the length of the stack.
   int get length => size();
+  
+  /// print stack
+  void print_() {
+    if (_list.isEmpty) {
+      print("Stack is empty!");
+    } else {
+      while (!_list.isEmpty) {
+        print(_list.last);
+        _list.removeLast();
+      }
+    }
+  }
 }
