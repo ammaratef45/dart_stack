@@ -30,4 +30,7 @@ class Stack<T> {
   int size() {
     return _list.length;
   }
+
+  /// get the length of the stack.
+  int get length => size();
 }

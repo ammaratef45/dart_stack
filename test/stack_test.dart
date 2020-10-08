@@ -30,5 +30,21 @@ void main() {
       expect(stack.pop(), 'def');
       expect(stack.top(), 'abc');
     });
+    test('size', () {
+      Stack<String> stack = Stack();
+      stack.push('abc');
+      stack.push('def');
+      expect(stack.size(), 2);
+      stack.pop();
+      expect(stack.size(), 1);
+    });
+    test('length', () {
+      Stack<String> stack = Stack();
+      stack.push('abc');
+      stack.push('def');
+      expect(stack.length, 2);
+      stack.pop();
+      expect(stack.length, 1);
+    });
   });
 }
