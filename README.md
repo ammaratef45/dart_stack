@@ -33,6 +33,7 @@ stack.pop();
 stack.isEmpty;
 // Check for non-enpty
 stack.isNotEmpty;
+stack.printStack();
 ```
 
 
