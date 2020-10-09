@@ -34,17 +34,21 @@ class Stack<T> {
   /// get the length of the stack.
   int get length => size();
   
-  // returns true if element is found at the top of the stack
-  bool find(T x) => (x == _list.last) ? true : false;
-  
-  // returns true if element is found in the stack
+  /// returns true if element is found in the stack
   bool contains(T x) {
-    bool found = false;
     for (var item in _list) {
       if (x == item) {
-        found = true;
+        return true;
       }
     }
-    return found;
+    return false;
+  }
+  
+  /// print stack
+  void print_() {
+    final List<T> l = List.from(_list);
+    for (var item in l.reversed) {
+      print(item);
+    }
   }
 }
