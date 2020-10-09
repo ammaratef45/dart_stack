@@ -33,4 +33,7 @@ class Stack<T> {
 
   /// get the length of the stack.
   int get length => size();
+  
+  // returns true if element is found at the top of the stack
+  bool find(T x) => (x == _list.last) ? true : false;
 }
