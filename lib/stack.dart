@@ -45,9 +45,8 @@ class Stack<T> {
   }
   
   /// print stack
-  void print_() {
-    final List<T> l = List.from(_list);
-    for (var item in l.reversed) {
+  void debugPrint() {
+    for (var item in List<T>.from(_list).reversed) {
       print(item);
     }
   }
