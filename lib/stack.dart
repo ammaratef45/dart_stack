@@ -34,6 +34,16 @@ class Stack<T> {
   /// get the length of the stack.
   int get length => size();
   
+  /// returns true if element is found in the stack
+  bool contains(T x) {
+    for (var item in _list) {
+      if (x == item) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
   /// print stack
   void print_() {
     final List<T> l = List.from(_list);
