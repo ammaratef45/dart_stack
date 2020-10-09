@@ -36,4 +36,15 @@ class Stack<T> {
   
   // returns true if element is found at the top of the stack
   bool find(T x) => (x == _list.last) ? true : false;
+  
+  // returns true if element is found in the stack
+  bool contains(T x) {
+    bool found = false;
+    for (var item in _list) {
+      if (x == item) {
+        found = true;
+      }
+    }
+    return found;
+  }
 }
