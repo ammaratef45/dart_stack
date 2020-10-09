@@ -33,7 +33,7 @@ class Stack<T> {
 
   /// get the length of the stack.
   int get length => size();
-  
+
   /// returns true if element is found in the stack
   bool contains(T x) {
     for (var item in _list) {
@@ -43,11 +43,10 @@ class Stack<T> {
     }
     return false;
   }
-  
+
   /// print stack
-  void print_() {
-    final List<T> l = List.from(_list);
-    for (var item in l.reversed) {
+  void debugPrint() {
+    for (var item in List<T>.from(_list).reversed) {
       print(item);
     }
   }
