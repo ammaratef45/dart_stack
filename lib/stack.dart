@@ -36,13 +36,9 @@ class Stack<T> {
   
   /// print stack
   void print_() {
-    if (_list.isEmpty) {
-      print("Stack is empty!");
-    } else {
-      while (!_list.isEmpty) {
-        print(_list.last);
-        _list.removeLast();
-      }
+    final List<T> l = List.from(_list);
+    for (var item in l.reversed) {
+      print(item);
     }
   }
 }
