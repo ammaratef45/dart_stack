@@ -15,4 +15,8 @@ void main() {
     stack.pop();
   }
   print(stack.isEmpty); // prints true
+  // returns true if element is found
+  print(stack.contains("abc"));
+  // returns flase if element is not found
+  print(stack.contains("kxn"));
 }
