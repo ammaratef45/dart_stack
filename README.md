@@ -33,6 +33,10 @@ stack.pop();
 stack.isEmpty;
 // Check for non-enpty
 stack.isNotEmpty;
+// returns true if element if found in the stack otherwise false
+stack.contains("abc");
+// print the complete stack
+stack.debugPrint();
 ```
 
 
