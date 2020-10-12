@@ -8,6 +8,8 @@ void main() {
   print(stack.top()); // prints 'abc'
   print(stack.size()); // prints 1
   print(stack.length); // prints 1
+  print(stack.contains('abc')); // prints true
+  print(stack.contains('edf')); // prints false
   for (var i = 0; i < 10; i++) {
     stack.push(i.toString());
   }

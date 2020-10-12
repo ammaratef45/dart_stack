@@ -1,3 +1,6 @@
+# 0.1.2
+Added contains
+
 # 0.1.1
 Added size and length
 
