@@ -1,6 +1,7 @@
 # dart_stack
 A dart package for stack datastructure
 
+[![pub](https://img.shields.io/pub/v/stack.svg)](https://pub.dev/packages/stack)
 [![codecov](https://codecov.io/gh/ammaratef45/dart_stack/branch/master/graph/badge.svg)](https://codecov.io/gh/ammaratef45/dart_stack)
 [![CircleCI](https://circleci.com/gh/ammaratef45/dart_stack.svg?style=svg)](https://circleci.com/gh/ammaratef45/dart_stack)
 
