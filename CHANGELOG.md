@@ -1,5 +1,5 @@
 # 0.1.2
-Added contains
+Added contains and debugPrint
 
 # 0.1.1
 Added size and length
