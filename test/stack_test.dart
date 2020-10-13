@@ -46,5 +46,14 @@ void main() {
       stack.pop();
       expect(stack.length, 1);
     });
+    test('contains', () {
+      Stack<String> stack = Stack();
+      stack.push('abc');
+      stack.push('def');
+      expect(stack.contains('def'), true);
+      stack.pop();
+      expect(stack.contains('def'), false);
+    });
+    // TODO add a test for debug print
   });
 }
