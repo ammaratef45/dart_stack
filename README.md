@@ -37,7 +37,7 @@ stack.isNotEmpty;
 // see if the stack has a certain object
 stack.contains("abc");
 // print the complete stack
-stack.debugPrint();
+stack.print();
 ```
 
 

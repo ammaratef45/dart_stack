@@ -13,6 +13,7 @@ void main() {
   for (var i = 0; i < 10; i++) {
     stack.push(i.toString());
   }
+  stack.print(); // prints the whole stack
   while (stack.isNotEmpty) {
     stack.pop();
   }

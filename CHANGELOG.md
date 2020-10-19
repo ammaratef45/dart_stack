@@ -1,3 +1,6 @@
+# 0.1.3
+Renamed debugPrint to print
+
 # 0.1.2
 Added contains and debugPrint
 
