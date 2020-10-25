@@ -38,6 +38,8 @@ stack.isNotEmpty;
 stack.contains("abc");
 // print the complete stack
 stack.print();
+// get size of current stack
+stack.size() || var s = stack.size()
 ```
 
 
