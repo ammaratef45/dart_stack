@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:stack/stack.dart';
 import 'package:test/test.dart';
 
@@ -54,6 +56,25 @@ void main() {
       stack.pop();
       expect(stack.contains('def'), false);
     });
-    // TODO add a test for debug print
+    test('print', overridePrint(() {
+      log.clear();
+      Stack<String> stack = Stack();
+      stack.push('abc');
+      stack.push('def');
+      stack.print();
+      expect(log.length, 2);
+      expect(log[0], 'def');
+      expect(log[1], 'abc');
+    }));
   });
 }
+
+List<String> log = [];
+void Function() overridePrint(void testFn()) => () {
+      var spec = ZoneSpecification(
+        print: (self, parent, zone, line) {
+          log.add(line);
+        },
+      );
+      return Zone.current.fork(specification: spec).run<void>(testFn);
+    };
