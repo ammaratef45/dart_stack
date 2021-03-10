@@ -4,7 +4,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: ammaratef45/flutter:latest
+      - image: cirrusci/flutter
     steps:
       - checkout
       - run: pub get && pub run test_coverage
