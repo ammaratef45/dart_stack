@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:stack/illegal_operation_exception.dart';
 import 'package:stack/stack.dart';
 import 'package:test/test.dart';
 
@@ -25,12 +26,30 @@ void main() {
       stack.push('abc');
       expect(stack.top(), 'abc');
     });
+    test('top on empty', () {
+      try {
+        Stack<String> stack = Stack();
+        stack.top();
+        fail('should throw an exception but it did not.');
+      } catch (ex) {
+        expect(ex, isA<IllegalOperationException>());
+      }
+    });
     test('pop', () {
       Stack<String> stack = Stack();
       stack.push('abc');
       stack.push('def');
       expect(stack.pop(), 'def');
       expect(stack.top(), 'abc');
+    });
+    test('pop on empty', () {
+      try {
+        Stack<String> stack = Stack();
+        stack.pop();
+        fail('should throw an exception but it did not.');
+      } catch (ex) {
+        expect(ex, isA<IllegalOperationException>());
+      }
     });
     test('size', () {
       Stack<String> stack = Stack();

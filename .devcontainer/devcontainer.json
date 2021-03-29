@@ -1,0 +1,5 @@
+{
+  "name": "Flutter",
+  "image": "cirrusci/flutter:stable",
+  "extensions": ["dart-code.dart-code", "dart-code.flutter"]
+}

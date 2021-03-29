@@ -1,3 +1,6 @@
+# 0.1.5
+Added IllegalOperationException
+
 # 0.1.4
 Null Safety fix
 

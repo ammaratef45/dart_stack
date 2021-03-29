@@ -42,6 +42,11 @@ stack.print();
 stack.size() || var s = stack.size()
 ```
 
+# Exceptions
+Trying to use `top()` or `pop()` on an empty stack throws `IllegalOperationException`.
+use `size()`, `isEmpty`, or `isNotEmpty` to check before using these operations.
+
+
 
 Feel free to file feature requests and bug reports at the
 [issue tracker][].

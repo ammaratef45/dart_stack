@@ -2,6 +2,8 @@ import 'dart:collection';
 import 'dart:core' as core;
 import 'dart:core';
 
+import 'package:stack/illegal_operation_exception.dart';
+
 class Stack<T> {
   final ListQueue<T> _list = ListQueue();
 
@@ -18,6 +20,12 @@ class Stack<T> {
 
   /// get the top of the stack and delete it.
   T pop() {
+    if (isEmpty) {
+      throw IllegalOperationException(
+        'Can\'t use pop with empty stack\n consider '
+        'checking for size or isEmpty before calling pop',
+      );
+    }
     T res = _list.last;
     _list.removeLast();
     return res;
@@ -25,6 +33,12 @@ class Stack<T> {
 
   /// get the top of the stack without deleting it.
   T top() {
+    if (isEmpty) {
+      throw IllegalOperationException(
+        'Can\'t use top with empty stack\n consider '
+        'checking for size or isEmpty before calling top',
+      );
+    }
     return _list.last;
   }
 
@@ -38,12 +52,7 @@ class Stack<T> {
 
   /// returns true if element is found in the stack
   bool contains(T x) {
-    for (var item in _list) {
-      if (x == item) {
-        return true;
-      }
-    }
-    return false;
+    return _list.contains(x);
   }
 
   /// print stack
