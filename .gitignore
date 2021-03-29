@@ -16,3 +16,5 @@ doc/api/
 test/.test_coverage.dart
 
 .vscode/
+
+coverage/
