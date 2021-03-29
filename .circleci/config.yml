@@ -7,6 +7,6 @@ jobs:
       - image: cirrusci/flutter
     steps:
       - checkout
-      - run: pub get && pub run test_coverage
+      - run: pub get && flutter test --coverage
       - codecov/upload:
           file: 'coverage/lcov.info'
