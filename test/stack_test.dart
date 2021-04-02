@@ -6,6 +6,15 @@ import 'package:test/test.dart';
 
 void main() {
   group('with string', () {
+    test('illegal size stack', () {
+      try {
+        Stack<String> stack = Stack.sized( 1 );
+        fail('should throw an exception but it did not.');
+      } catch (ex) {
+        expect(ex, isA<IllegalOperationException>());
+      }
+    });
+
     test('is empty', () {
       Stack<String> stack = Stack();
       expect(stack.isEmpty, true);
@@ -20,6 +29,17 @@ void main() {
     test('push', () {
       Stack<String> stack = Stack();
       stack.push('abc');
+    });
+    test('push beyond maximum stack size', () {
+      Stack<String> stack = Stack.sized( 2 );
+      try {
+        stack.push('abc');
+        stack.push('def');
+        stack.push('ghi');
+        fail('should throw an exception for exceeding stack size, but it did not.');
+      } catch (ex) {
+        expect(ex, isA<IllegalOperationException>());
+      }
     });
     test('top', () {
       Stack<String> stack = Stack();
