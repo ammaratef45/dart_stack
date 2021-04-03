@@ -1,3 +1,6 @@
+# 0.2.0
+Added Sized constructor to control stack's size
+
 # 0.1.5
 Added IllegalOperationException
 
