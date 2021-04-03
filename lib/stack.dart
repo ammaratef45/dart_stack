@@ -7,6 +7,31 @@ import 'package:stack/illegal_operation_exception.dart';
 class Stack<T> {
   final ListQueue<T> _list = ListQueue();
 
+  final int noLimit = -1;
+
+  /// the maximum number of entries allowed on the stack. -1 = no limit.
+  int _sizeMax = 0;
+
+  /// Default constructor sets the maximum stack size to 'no limit.'
+  Stack() {
+    _sizeMax = noLimit;
+  }
+
+  /// Constructor in which you can specify maximum number of entries.
+  /// This maximum is a limit that is enforced as entries are pushed on to the stack
+  /// to prevent stack growth beyond a maximum size. There is no pre-allocation of
+  /// slots for entries at any time in this library.
+  Stack.sized(int sizeMax) {
+    if(sizeMax < 2) {
+      throw IllegalOperationException(
+        'Error: stack size must be 2 entries or more '
+      );
+    }
+    else {
+      _sizeMax = sizeMax;
+    }
+  }
+
   /// check if the stack is empty.
   bool get isEmpty => _list.isEmpty;
 
@@ -15,7 +40,13 @@ class Stack<T> {
 
   /// push element in top of the stack.
   void push(T e) {
-    _list.addLast(e);
+    if(_sizeMax == noLimit || _list.length < _sizeMax) {
+      _list.addLast(e);
+    }
+    else {
+      throw IllegalOperationException(
+        'Error: cannot add element. Stack already at maximum size of: ${_sizeMax} elements');
+    }
   }
 
   /// get the top of the stack and delete it.
