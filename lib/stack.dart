@@ -17,6 +17,9 @@ class Stack<T> {
     _sizeMax = noLimit;
   }
 
+  // Returns a list of T elements contained in the Stack
+  List<T> toList() => _list.toList();
+  
   /// Constructor in which you can specify maximum number of entries.
   /// This maximum is a limit that is enforced as entries are pushed on to the stack
   /// to prevent stack growth beyond a maximum size. There is no pre-allocation of
