@@ -85,6 +85,13 @@ class Stack<T> {
   bool contains(T x) {
     return _list.contains(x);
   }
+  
+  /// removes all elements from the stack
+  void clear() {
+    while (this.isNotEmpty) {
+      this.pop();
+    }
+  }
 
   /// print stack
   void print() {
