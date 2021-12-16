@@ -14,8 +14,6 @@ void main() {
     stack.push(i.toString());
   }
   stack.print(); // prints the whole stack
-  while (stack.isNotEmpty) {
-    stack.pop();
-  }
+  stack.clear();
   print(stack.isEmpty); // prints true
 }
