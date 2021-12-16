@@ -88,8 +88,8 @@ class Stack<T> {
   
   /// removes all elements from the stack
   void clear() {
-    while (this.isNotEmpty) {
-      this.pop();
+    while (isNotEmpty) {
+      _list.removeLast();
     }
   }
 
