@@ -95,6 +95,15 @@ void main() {
       stack.pop();
       expect(stack.contains('def'), false);
     });
+    test('clear', () {
+      Stack<String> stack = Stack();
+      stack.push('abc');
+      stack.push('def');
+      stack.push('ghi');
+      expect(stack.length, 3);
+      stack.clear();
+      expect(stack.length, 0);
+    });
     test('print', overridePrint(() {
       log.clear();
       Stack<String> stack = Stack();
