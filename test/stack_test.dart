@@ -8,7 +8,7 @@ void main() {
   group('with string', () {
     test('illegal size stack', () {
       try {
-        Stack<String> stack = Stack.sized(1);
+        Stack.sized(1);
         fail('should throw an exception but it did not.');
       } catch (ex) {
         expect(ex, isA<IllegalOperationException>());
@@ -36,7 +36,8 @@ void main() {
         stack.push('abc');
         stack.push('def');
         stack.push('ghi');
-        fail('should throw an exception for exceeding stack size, but it did not.');
+        fail(
+            'should throw an exception for exceeding stack size, but it did not.');
       } catch (ex) {
         expect(ex, isA<IllegalOperationException>());
       }

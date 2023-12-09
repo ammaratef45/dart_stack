@@ -1,3 +1,6 @@
+# 0.2.2
+Added `toList`
+
 # 0.2.0
 Added Sized constructor to control stack's size
 
